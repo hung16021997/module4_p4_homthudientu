@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email configs</title>
+</head>
+<body>
+    <h1>Your Email configs</h1>
+    <table border="1px">
+        <tr>
+            <td>Language:</td>
+            <td><span th:text="${outputForm.getLanguage()}"></span></td>
+        </tr>
+        <tr>
+            <td>Page Size:</td>
+            <td><span th:text="${outputForm.getPageSize()}"></span> Emails per page</td>
+        </tr>
+        <tr>
+            <td>Spam filter:</td>
+            <td><span th:text="${outputForm.isSpamFilter()}"></span></td>
+        </tr>
+        <tr>
+            <td>Signature:</td>
+            <td><span th:text="${outputForm.getSignature()}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a th:href="@{/}">Back</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
